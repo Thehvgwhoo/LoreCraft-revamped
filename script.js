@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const loadingScreen = document.getElementById('loading-screen');
     const serverChecker = document.getElementById('server-checker');
 
-    const serverIp = '94.130.66.225:25500'; // Replace with your specific server IP
+    const serverIp = '94.130.66.225'; // Replace with your specific server IP
 
     checkServerButton.addEventListener('click', () => {
         showLoadingScreen();
