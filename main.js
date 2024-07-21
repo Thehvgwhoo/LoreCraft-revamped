@@ -10,15 +10,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const serverChecker = document.getElementById('server-checker');
 
     const serverIp = '94.130.66.225'; // Replace with your specific server IP
+    const serverPort = '25500'; // Replace with your specific server port
 
     checkServerButton.addEventListener('click', () => {
         showLoadingScreen();
-        fetchServerData(serverIp);
+        fetchServerData(serverIp, serverPort);
     });
 
-    async function fetchServerData(serverIp) {
+    async function fetchServerData(serverIp, serverPort) {
         try {
-            const response = await fetch(`https://api.mcsrvstat.us/2/${serverIp}`);
+            const response = await fetch(`https://api.mcsrvstat.us/2/${serverIp}:${serverPort}`);
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
